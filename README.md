@@ -1,13 +1,13 @@
-# Ubuntu 虚拟机安装 Clawdbot 完整流程
+# Ubuntu 虚拟机安装 OpenClaw 完整流程
 
-本教程适用于在 Ubuntu 虚拟机环境下，通过官方脚本和 Opencode 工具部署 Clawdbot。
+本教程适用于在 Ubuntu 虚拟机环境下，通过官方脚本和 Opencode 工具部署 OpenClaw。
 
 ## 目录
 
 - [1. 基础环境配置（免密设置）](#1-基础环境配置免密设置)
 - [2. 安装基础工具与 OpenSSH](#2-安装基础工具与-openssh)
 - [3. 安装 Opencode 工具](#3-安装-opencode-工具)
-- [4. 安装 Clawdbot (官方脚本)](#4-安装-clawdbot-官方脚本)
+- [4. 安装 OpenClaw (官方脚本)](#4-安装-openclaw-官方脚本)
 - [5. 调用教程完成后续配置](#5-调用教程完成后续配置)
 - [6. 浏览器扩展安装](#6-浏览器扩展安装)
 
@@ -94,7 +94,7 @@ opencode --version
 
 ---
 
-## 4. 安装 Clawdbot (官方脚本)
+## 4. 安装 OpenClaw (官方脚本)
 
 使用官方提供的一键安装脚本进行部署：
 
@@ -107,7 +107,7 @@ curl -fsSL https://molt.bot/install.sh | bash
 安装完成后，运行初始化向导完成基本配置：
 
 ```bash
-clawdbot onboard --install-daemon
+openclaw onboard --install-daemon
 ```
 
 按照向导提示完成配置：
@@ -119,14 +119,14 @@ clawdbot onboard --install-daemon
 ### 4.2 验证安装
 
 ```bash
-# 检查 clawdbot 是否安装成功
-which clawdbot
+# 检查 openclaw 是否安装成功
+which openclaw
 
 # 查看版本
-clawdbot --version
+openclaw --version
 
 # 检查 Gateway 状态
-clawdbot gateway status
+openclaw gateway status
 ```
 
 ---
@@ -138,7 +138,7 @@ clawdbot gateway status
 ### 5.1 教程地址
 
 ```
-https://github.com/spoto-team/clawdbot-minimax-guide
+https://github.com/spoto-team/openclaw-minimax-guide
 ```
 
 ### 5.2 执行命令
@@ -146,7 +146,7 @@ https://github.com/spoto-team/clawdbot-minimax-guide
 在终端输入以下命令：
 
 ```bash
-opencode run https://github.com/spoto-team/clawdbot-minimax-guide
+opencode run https://github.com/spoto-team/openclaw-minimax-guide
 ```
 
 ### 5.3 后续配置内容
@@ -160,7 +160,7 @@ opencode run https://github.com/spoto-team/clawdbot-minimax-guide
 - 获取 API Key
 - 编辑配置文件
 
-**相关文档**：[Clawdbot 国内 API 替换配置指南](./CLAWDBOT-CN-API-GUIDE.md)
+**相关文档**：[OpenClaw 国内 API 替换配置指南](./OPENCLAW-CN-API-GUIDE.md)
 
 #### 5.3.2 局域网访问配置
 
@@ -169,14 +169,14 @@ opencode run https://github.com/spoto-team/clawdbot-minimax-guide
 - 获取登录 Token
 - 配置 HTTP 安全访问
 
-**相关文档**：[Clawdbot 局域网访问配置指南](./CLAWDBOT-LAN-ACCESS-GUIDE.md)
+**相关文档**：[OpenClaw 局域网访问配置指南](./OPENCLAW-LAN-ACCESS-GUIDE.md)
 
 ### 5.4 完成配置
 
 请根据屏幕提示完成以下步骤：
 
 1. ✅ 获取并配置 API Key
-2. ✅ 编辑配置文件 `~/.clawdbot/clawdbot.json`
+2. ✅ 编辑配置文件 `~/.openclaw/openclaw.json`
 3. ✅ 重启 Gateway
 4. ✅ 验证模型配置
 5. ✅ 配置局域网访问（如需要）
@@ -186,17 +186,17 @@ opencode run https://github.com/spoto-team/clawdbot-minimax-guide
 
 ## 6. 浏览器扩展安装
 
-如需在 Clawdbot 中调用浏览器功能，请在终端执行扩展安装命令：
+如需在 OpenClaw 中调用浏览器功能，请在终端执行扩展安装命令：
 
 ```bash
-clawdbot browser extension install
+openclaw browser extension install
 ```
 
 ### 6.1 验证浏览器扩展
 
 ```bash
 # 检查浏览器扩展状态
-clawdbot browser status
+openclaw browser status
 ```
 
 ---
@@ -236,7 +236,7 @@ visudo
 
 3. 确认虚拟机 IP 地址正确
 
-### Q3: Clawdbot 安装失败
+### Q3: OpenClaw 安装失败
 
 **问题**：官方脚本安装失败
 
@@ -249,14 +249,14 @@ visudo
 
 2. 清理后重试：
    ```bash
-   npm uninstall -g clawdbot
+   npm uninstall -g openclaw
    npm cache clean --force
    curl -fsSL https://molt.bot/install.sh | bash
    ```
 
 3. 查看错误日志：
    ```bash
-   tail -f ~/.clawdbot/logs/gateway.log
+   tail -f ~/.openclaw/logs/gateway.log
    ```
 
 ### Q4: Opencode 教程加载失败
@@ -268,8 +268,8 @@ visudo
 1. 检查网络连接
 2. 手动克隆教程仓库：
    ```bash
-   git clone https://github.com/spoto-team/clawdbot-minimax-guide.git
-   cd clawdbot-minimax-guide
+   git clone https://github.com/spoto-team/openclaw-minimax-guide.git
+   cd openclaw-minimax-guide
    ```
 3. 按照本地文档完成配置
 
@@ -279,15 +279,15 @@ visudo
 
 完成本教程后，你将拥有：
 
-- ✅ 运行在 Ubuntu 虚拟机上的 Clawdbot
+- ✅ 运行在 Ubuntu 虚拟机上的 OpenClaw
 - ✅ 配置完成的国内 API（MiniMax 或智谱）
 - ✅ 可通过局域网访问的 Web UI
 - ✅ 可选的浏览器扩展功能
 
 ## 相关资源
 
-- [Clawdbot 官方文档](https://docs.clawd.bot)
-- [Clawdbot GitHub](https://github.com/clawdbot/clawdbot)
+- [OpenClaw 官方文档](https://docs.clawd.bot)
+- [OpenClaw GitHub](https://github.com/openclaw/openclaw)
 - [MiniMax 官网](https://www.minimaxi.com)
 - [智谱 AI 官网](https://bigmodel.cn)
 - [Opencode 官网](https://opencode.ai)
@@ -305,6 +305,6 @@ MIT License - 详见 [LICENSE](./LICENSE) 文件
 - 文档版本: 1.0
 - 创建日期: 2026-01-29
 - 适用系统: Ubuntu 20.04/22.04
-- 支持的 Clawdbot 版本: 2026.1.24-3+
+- 支持的 OpenClaw 版本: 2026.1.24-3+
 
 **注意**：请妥善保管您的 API Key、Token 和虚拟机访问凭证，定期检查系统安全。
