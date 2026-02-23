@@ -78,6 +78,15 @@ https://github.com/clash-verge-rev/clash-verge-rev/releases/tag/v2.4.6
 
 机场推荐：https://u.xjbl.org/jlcloud
 
+### 2.4 安装 Open VM Tools
+根据你的系统类型选择（既然你用的是 Desktop 版，执行第二条）：
+
+针对桌面版（支持拖拽、剪贴板、自动缩放窗口）：
+
+```Bash
+sudo apt install open-vm-tools-desktop -y
+```
+
 ## 3. 安装 Opencode 工具
 
 Opencode 用于简化后续的复杂配置过程。
