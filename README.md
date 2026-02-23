@@ -75,6 +75,7 @@ ip addr show | grep -E "inet " | awk '{print $2}' | cut -d'/' -f1 | grep -v "^12
 ---
 ### 2.3 网络魔法工具
 https://github.com/clash-verge-rev/clash-verge-rev/releases/tag/v2.4.6
+机场推荐：https://u.xjbl.org/jlcloud
 
 ## 3. 安装 Opencode 工具
 
