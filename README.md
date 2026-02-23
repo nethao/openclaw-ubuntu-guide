@@ -103,7 +103,7 @@ opencode --version
 使用官方提供的一键安装脚本进行部署：
 
 ```bash
-curl -fsSL https://molt.bot/install.sh | bash
+curl -fsSL https://openclaw.ai/install.sh | bash
 ```
 
 ### 4.1 运行初始化向导
